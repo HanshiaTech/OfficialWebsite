@@ -96,14 +96,14 @@ export const DeveloperDocsModal: React.FC<DeveloperDocsModalProps> = ({ isOpen, 
             </div>
           </div>
 
-          {/* 4. Firebase Persistence */}
+          {/* 4. Local Persistence & Form Delivery */}
           <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
             <div className="flex items-center gap-2 mb-2 text-purple-600 dark:text-purple-400 font-bold">
               <Database size={18} />
-              <h4 className="text-sm">4. Firebase Firestore & Auth Layer</h4>
+              <h4 className="text-sm">4. Multi-Service Contact Delivery & Storage</h4>
             </div>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              Integrated in <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">/src/lib/firebase.ts</code>. Supports Google OAuth, Email, and Guest Demo sessions. Firestore stores project inquiries with automatic LocalStorage fallback when offline.
+              Inquiries are routed to <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">hanshiatech@gmail.com</code> via FormSubmit and Web3Forms with automatic local browser persistence in <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">/src/lib/api.ts</code>.
             </p>
           </div>
 

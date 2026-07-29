@@ -4,10 +4,16 @@ export const SITE_CONFIG = {
   companyName: 'HANSHIA TECH',
   establishedYear: '2026',
   location: 'Indonesia',
-  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || 'hansia.tech@gmail.com',
+  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || 'hanshiatech@gmail.com',
   phoneNumber: '+62 812-3456-7890',
   telegramUsername: '@hanshiatech',
   telegramUrl: 'https://t.me/hanshiatech',
+  socials: {
+    github: 'https://github.com/hanshiatech',
+    linkedin: 'https://linkedin.com/company/hanshiatech',
+    twitter: 'https://x.com/hanshiatech',
+    instagram: 'https://instagram.com/hanshiatech'
+  },
   vision: {
     en: 'To be the most reliable local software development partner for startups and businesses, leveraging AI efficiency to deliver high-quality, fast, and accessible technology solutions.',
     id: 'Menjadi mitra pengembang perangkat lunak lokal yang paling dapat diandalkan untuk startup dan bisnis Indonesia, memanfaatkan efisiensi AI untuk menghadirkan solusi teknologi berkualitas tinggi, cepat, dan terjangkau.',

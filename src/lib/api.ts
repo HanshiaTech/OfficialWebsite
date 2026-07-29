@@ -1,5 +1,6 @@
 import { Service, WhyUsItem, Project, StatItem, AIResponse, ContactSubmission } from '../types';
 import { INITIAL_SERVICES, INITIAL_WHY_US, INITIAL_PROJECTS, INITIAL_STATS } from '../data/initialData';
+import { SITE_CONFIG } from '../config/site';
 
 export interface FetchOptions {
   bypassCache?: boolean;
@@ -181,9 +182,9 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
     createdAt: new Date().toISOString()
   };
 
-  const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'androidtvmedan@gmail.com';
+  const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || SITE_CONFIG.contactEmail || 'hanshiatech@gmail.com';
 
-  // 1. Try sending via FormSubmit.co (Zero-Config: directly sends email to recipient, no Vercel env vars required)
+  // 1. Try sending via FormSubmit.co (Zero-Config email service)
   try {
     const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
       method: 'POST',
@@ -202,14 +203,17 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
     });
 
     if (formSubmitRes.ok) {
-      console.log('FormSubmit email sent successfully to', recipientEmail);
-      return { success: true, submission: newSubmission };
+      const data = await formSubmitRes.json().catch(() => ({}));
+      if (data.success === 'true' || data.success === true || formSubmitRes.status === 200) {
+        console.log('FormSubmit email sent successfully to', recipientEmail);
+        return { success: true, submission: newSubmission };
+      }
     }
   } catch (e) {
     console.warn('FormSubmit email delivery failed, trying Web3Forms/server fallbacks:', e);
   }
 
-  // 2. Try sending via Web3Forms API (if VITE_WEB3FORMS_ACCESS_KEY is set in env)
+  // 2. Try sending via Web3Forms API (if VITE_WEB3FORMS_ACCESS_KEY is set)
   const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
   if (web3FormsKey) {
     try {
@@ -238,7 +242,7 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
     }
   }
 
-  // 2. Try sending to Express / Serverless API endpoint
+  // 3. Try sending to Express / Serverless API endpoint
   try {
     const res = await fetch('/api/contact', {
       method: 'POST',
@@ -248,14 +252,18 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
 
     const contentType = res.headers.get('content-type') || '';
     if (res.ok && contentType.includes('application/json')) {
-      return await res.json();
+      const data = await res.json();
+      if (data.success) {
+        return data;
+      }
     }
   } catch (e) {
-    console.warn('API /api/contact unavailable, accepting client submission locally:', e);
+    console.warn('API /api/contact unavailable:', e);
   }
 
+  // Return failure if all delivery attempts failed
   return {
-    success: true,
+    success: false,
     submission: newSubmission
   };
 }
