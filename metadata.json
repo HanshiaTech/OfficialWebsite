@@ -1,0 +1,6 @@
+{
+  "name": "Hanshia Tech - AI Landing Page",
+  "description": "Scalable Atomic Design landing page for Hanshia Tech with dark mode, multi-language support, backend API caching, developer docs and Figma design inspector.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
