@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   companyName: 'HANSHIA TECH',
   establishedYear: '2026',
   location: 'Indonesia',
-  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || 'hanshiatech@gmail.com',
+  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || 'hansia.tech@gmail.com',
   phoneNumber: '+62 812-3456-7890',
   telegramUsername: '@hanshiatech',
   telegramUrl: 'https://t.me/hanshiatech',

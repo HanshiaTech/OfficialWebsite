@@ -44,16 +44,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <NavMenu activeSection={activeSection} onNavigate={onNavigate} lang={lang} />
         </div>
 
-        {/* Controls & CTA */}
+        {/* Controls */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle isDark={isDark} onToggle={onToggleTheme} />
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
-
-          {/* Let's Talk CTA */}
-          <Button onClick={onOpenContact} size="sm" variant="primary" className="whitespace-nowrap font-medium text-xs sm:text-sm px-4 py-2">
-            <span>{t.letsTalk}</span>
-            <ArrowRight size={14} />
-          </Button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -80,13 +74,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             lang={lang}
             className="flex-col items-start gap-1"
           />
-          <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
             <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
-            <div className="flex items-center gap-2">
-              <Button onClick={onOpenContact} size="sm" variant="primary">
-                {t.letsTalk}
-              </Button>
-            </div>
           </div>
         </div>
       )}

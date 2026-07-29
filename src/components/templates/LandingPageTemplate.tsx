@@ -99,17 +99,9 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
 
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
-    if (sectionId === 'contact') {
-      setIsContactOpen(true);
-      const element = document.getElementById('contact');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -124,7 +116,7 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
         onToggleTheme={handleToggleTheme}
         lang={lang}
         onSelectLang={setLang}
-        onOpenContact={() => setIsContactOpen(true)}
+        onOpenContact={() => handleNavigate('contact')}
       />
 
       {/* Main Sections */}
@@ -132,7 +124,7 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
         <HeroSection
           stats={stats}
           lang={lang}
-          onOpenContact={() => setIsContactOpen(true)}
+          onOpenContact={() => handleNavigate('contact')}
           onNavigate={handleNavigate}
         />
 
@@ -158,7 +150,6 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
 
         <CtaSection
           lang={lang}
-          onOpenContact={() => setIsContactOpen(true)}
         />
       </main>
 
