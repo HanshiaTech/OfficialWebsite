@@ -102,4 +102,3 @@ Buka `/src/components/organisms/LegalModal.tsx` untuk mengedit isi syarat dan ke
 ---
 
 *Hak Cipta © 2026 HANSHIA TECH. Seluruh hak cipta dilindungi undang-undang.*
-"# OfficialWebsite" 
