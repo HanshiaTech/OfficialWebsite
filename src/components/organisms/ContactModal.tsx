@@ -203,11 +203,31 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, lan
                 onChange={(e) => setMessage(e.target.value)}
               />
 
-              <div className="pt-1 flex flex-col gap-3">
+              <div className="pt-1 flex flex-col gap-2.5">
                 <Button type="submit" isLoading={isLoading} size="lg" variant="primary" className="w-full">
                   <span>{lang === 'id' ? 'Kirim Pesan Email Sekarang' : 'Send Email Message Now'}</span>
                   <Send size={16} />
                 </Button>
+
+                <div className="grid grid-cols-2 gap-2 text-xs font-medium">
+                  <a
+                    href={gmailWebUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors"
+                  >
+                    <Mail size={14} className="text-rose-500" />
+                    <span>{lang === 'id' ? 'Buka via Gmail' : 'Open via Gmail'}</span>
+                    <ExternalLink size={12} className="opacity-60" />
+                  </a>
+                  <a
+                    href={mailtoUrl}
+                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors"
+                  >
+                    <Mail size={14} className="text-blue-500" />
+                    <span>{lang === 'id' ? 'Aplikasi Mail' : 'Mail App'}</span>
+                  </a>
+                </div>
 
                 <div className="relative my-1 flex items-center justify-center">
                   <div className="border-t border-slate-200 dark:border-slate-800 w-full"></div>

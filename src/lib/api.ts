@@ -181,6 +181,64 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
     createdAt: new Date().toISOString()
   };
 
+  const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'androidtvmedan@gmail.com';
+
+  // 1. Try sending via FormSubmit.co (Zero-Config: directly sends email to recipient, no Vercel env vars required)
+  try {
+    const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        _subject: `[Website Hanshia Tech] Pesan Baru dari ${submission.name}`,
+        _template: 'table',
+        Nama: submission.name,
+        Email: submission.email,
+        Layanan: submission.serviceNeeded,
+        Pesan: submission.message
+      })
+    });
+
+    if (formSubmitRes.ok) {
+      console.log('FormSubmit email sent successfully to', recipientEmail);
+      return { success: true, submission: newSubmission };
+    }
+  } catch (e) {
+    console.warn('FormSubmit email delivery failed, trying Web3Forms/server fallbacks:', e);
+  }
+
+  // 2. Try sending via Web3Forms API (if VITE_WEB3FORMS_ACCESS_KEY is set in env)
+  const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+  if (web3FormsKey) {
+    try {
+      const web3Res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: web3FormsKey,
+          name: submission.name,
+          email: submission.email,
+          service: submission.serviceNeeded,
+          message: submission.message,
+          subject: `[Inquiry Proyek Hanshia Tech] ${submission.serviceNeeded} - ${submission.name}`,
+          from_name: 'Hanshia Tech Web Form'
+        })
+      });
+
+      if (web3Res.ok) {
+        return { success: true, submission: newSubmission };
+      }
+    } catch (e) {
+      console.warn('Web3Forms email delivery failed, trying fallback endpoints:', e);
+    }
+  }
+
+  // 2. Try sending to Express / Serverless API endpoint
   try {
     const res = await fetch('/api/contact', {
       method: 'POST',

@@ -11,7 +11,7 @@
     "clean": "rm -rf dist server.cjs",
     "lint": "tsc --noEmit",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@firebase/app": "^0.15.1",
