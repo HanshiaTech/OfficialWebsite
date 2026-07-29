@@ -23,7 +23,7 @@ export interface Project {
   title: string;
   description: Record<Language, string>;
   tags: string[];
-  category: 'SaaS' | 'Web' | 'Mobile' | 'AI';
+  category: 'SaaS' | 'Web' | 'Mobile' | 'AI' | 'Enterprise';
   imageUrl: string;
   metrics: {
     label: string;

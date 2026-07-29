@@ -20,10 +20,10 @@ export const WhyUsCard: React.FC<WhyUsCardProps> = ({ item, lang, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.08 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.01 }}
       whileHover={{ y: -4 }}
       className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col justify-between group"
     >

@@ -22,17 +22,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.01 }}
       className="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
     >
       {/* Project Image Header */}
       <div className="relative h-48 sm:h-52 overflow-hidden bg-slate-100 dark:bg-slate-800">
         <img
-          src={project.imageUrl}
+          src={project.imageUrl || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'}
           alt={project.title}
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80';
+          }}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
