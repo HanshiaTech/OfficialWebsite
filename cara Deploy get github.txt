@@ -1,0 +1,2 @@
+npm install -D gh-pages
+npm run deploy
