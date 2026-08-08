@@ -96,14 +96,38 @@ export const SITE_CONFIG = {
         en: 'Real-time document storage and secure authentication',
         id: 'Penyimpanan dokumen real-time dan autentikasi aman'
       }
+    },
+    {
+      name: 'Java & JUnit',
+      category: 'QA & Testing',
+      desc: {
+        en: 'Enterprise-grade automated testing engine & robust test execution framework',
+        id: 'Engine otomatisasi pengujian enterprise & kerangka kerja eksekusi test yang andal'
+      }
+    },
+    {
+      name: 'Cucumber BDD',
+      category: 'QA Automation',
+      desc: {
+        en: 'Behavior-Driven Development test scenarios using clear Gherkin syntax',
+        id: 'Skenario pengujian Behavior-Driven Development dengan sintaks Gherkin yang jelas'
+      }
+    },
+    {
+      name: 'RestAssured, Playwright & Selenium',
+      category: 'UI & API QA',
+      desc: {
+        en: 'End-to-end REST API validation and cross-browser automated UI functional testing',
+        id: 'Validasi REST API end-to-end dan pengujian fungsional UI otomatis lintas peramban'
+      }
     }
   ],
   teamMembers: [
     {
-      name: 'Founder & CTO',
+      name: 'Founder & Aspiring CTO',
       role: {
-        en: 'Chief Technology Officer',
-        id: 'Chief Technology Officer'
+        en: 'Aspiring Chief Technology Officer',
+        id: 'Aspiring Chief Technology Officer'
       },
       image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
       bio: {
