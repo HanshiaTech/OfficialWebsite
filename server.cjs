@@ -461,7 +461,7 @@ app.post("/api/contact", (req, res) => {
   if (!name || !email) {
     return res.status(400).json({ error: "Name and email are required." });
   }
-  const targetEmail = process.env.CONTACT_EMAIL || "androidtvmedan@gmail.com";
+  const targetEmail = "hanshia.tech@gmail.com";
   const submission = {
     id: "sub_" + Math.random().toString(36).substring(2, 9),
     name,
