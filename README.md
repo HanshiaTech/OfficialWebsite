@@ -46,7 +46,7 @@ Proyek ini menggunakan pola **Atomic Design** yang terorganisir dengan rapi di d
 
 ### 1. Mengubah Data Utama Perusahaan & Kontak
 Buka file `/src/config/site.ts`:
-* **Email Kontak**: Ubah properti `contactEmail` (Secara default `hanshiatech@gmail.com`).
+* **Email Kontak**: Ubah properti `contactEmail` (Secara default `hanshia.tech@gmail.com`).
 * **Telegram**: Ubah `telegramUsername` (`@hanshiatech`) atau `telegramUrl` (`https://t.me/hanshiatech`).
 * **Tahun Berdiri & Lokasi**: Disetting di `establishedYear` dan `location`.
 
@@ -77,7 +77,7 @@ Buka `/src/config/site.ts` pada array `teamMembers`:
 Buka `/src/i18n/translations.ts` untuk mengedit frasa atau menambah label baru untuk Bahasa Indonesia (`id`) maupun Bahasa Inggris (`en`).
 
 ### 5. Mengubah Terms of Service & Privacy Policy
-Buka `/src/components/organisms/LegalModal.tsx` untuk mengedit isi syarat dan ketentuan atau kebijakan privasi. Email resmi legal tercantum sebagai `hanshiatech@gmail.com`.
+Buka `/src/components/organisms/LegalModal.tsx` untuk mengedit isi syarat dan ketentuan atau kebijakan privasi. Email resmi legal tercantum sebagai `hanshia.tech@gmail.com`.
 
 ---
 

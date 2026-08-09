@@ -182,7 +182,7 @@ export async function postContactInquiry(submission: Omit<ContactSubmission, 'id
     createdAt: new Date().toISOString()
   };
 
-  const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || SITE_CONFIG.contactEmail || 'hanshiatech@gmail.com';
+  const recipientEmail = SITE_CONFIG.contactEmail;
 
   // 1. Try sending via FormSubmit.co (Zero-Config email service)
   try {

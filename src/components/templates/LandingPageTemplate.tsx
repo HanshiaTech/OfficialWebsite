@@ -7,7 +7,6 @@ import { FeaturedProjectsSection } from '../organisms/FeaturedProjectsSection';
 import { AboutSection } from '../organisms/AboutSection';
 import { CtaSection } from '../organisms/CtaSection';
 import { Footer } from '../organisms/Footer';
-import { ContactModal } from '../organisms/ContactModal';
 import { CaseStudyModal } from '../organisms/CaseStudyModal';
 import { DeveloperDocsModal } from '../organisms/DeveloperDocsModal';
 import { FigmaInspectorModal } from '../organisms/FigmaInspectorModal';
@@ -46,7 +45,6 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
   const [showToast, setShowToast] = useState(false);
 
   // Modals state
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<Project | null>(null);
   const [isDevDocsOpen, setIsDevDocsOpen] = useState(false);
   const [isFigmaOpen, setIsFigmaOpen] = useState(false);
@@ -167,12 +165,6 @@ export const LandingPageTemplate: React.FC<LandingPageTemplateProps> = ({
       <ScrollToTopButton lang={lang} />
 
       {/* Modals & Drawers */}
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        lang={lang}
-      />
-
       <CaseStudyModal
         project={selectedCaseStudy}
         onClose={() => setSelectedCaseStudy(null)}

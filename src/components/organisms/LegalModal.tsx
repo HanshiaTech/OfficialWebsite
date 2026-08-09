@@ -212,8 +212,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   {isIndo
                     ? 'Jika Anda memiliki pertanyaan seputar kebijakan privasi atau ingin mengajukan penghapusan data kontak, silakan hubungi tim legal kami melalui email: '
                     : 'For questions regarding our privacy policy or to request data removal, please contact our team at: '}
-                  <a href="mailto:hanshiatech@gmail.com" className="text-blue-600 dark:text-blue-400 underline font-semibold">
-                    hanshiatech@gmail.com
+                  <a href="mailto:hanshia.tech@gmail.com" className="text-blue-600 dark:text-blue-400 underline font-semibold">
+                    hanshia.tech@gmail.com
                   </a>
                 </p>
               </section>

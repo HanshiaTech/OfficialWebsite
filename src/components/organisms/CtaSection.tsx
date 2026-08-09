@@ -12,7 +12,7 @@ export interface CtaSectionProps {
 
 export const CtaSection: React.FC<CtaSectionProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
-  const email = SITE_CONFIG.contactEmail; // hansia.tech@gmail.com
+  const email = SITE_CONFIG.contactEmail; // hanshia.tech@gmail.com
   const telegramUsername = SITE_CONFIG.telegramUsername; // @hanshiatech
   const telegramUrl = SITE_CONFIG.telegramUrl; // https://t.me/hanshiatech
 

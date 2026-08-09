@@ -41,7 +41,7 @@ export const DeveloperDocsModal: React.FC<DeveloperDocsModalProps> = ({ isOpen, 
             <ul className="space-y-1.5 text-slate-600 dark:text-slate-300 font-mono text-xs">
               <li>• <strong className="text-blue-500">Atoms</strong> (/src/components/atoms/): Button, Badge, Typography, Input, ThemeToggle, LanguageSwitcher</li>
               <li>• <strong className="text-purple-500">Molecules</strong> (/src/components/molecules/): NavMenu, StatCard, ServiceCard, WhyUsCard, ProjectCard, AIAssistantWidget, DashboardChart</li>
-              <li>• <strong className="text-emerald-500">Organisms</strong> (/src/components/organisms/): Navbar, HeroSection, WhyUsSection, ServicesSection, FeaturedProjectsSection, CtaSection, Footer, ContactModal</li>
+              <li>• <strong className="text-emerald-500">Organisms</strong> (/src/components/organisms/): Navbar, HeroSection, WhyUsSection, ServicesSection, FeaturedProjectsSection, CtaSection, Footer</li>
               <li>• <strong className="text-amber-500">Templates & Pages</strong>: LandingPageTemplate, LandingPage</li>
             </ul>
           </div>
@@ -103,7 +103,7 @@ export const DeveloperDocsModal: React.FC<DeveloperDocsModalProps> = ({ isOpen, 
               <h4 className="text-sm">4. Multi-Service Contact Delivery & Storage</h4>
             </div>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              Inquiries are routed to <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">hanshiatech@gmail.com</code> via FormSubmit and Web3Forms with automatic local browser persistence in <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">/src/lib/api.ts</code>.
+              Inquiries are routed to <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">hanshia.tech@gmail.com</code> via FormSubmit and Web3Forms with automatic local browser persistence in <code className="bg-slate-200 dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-xs">/src/lib/api.ts</code>.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export const DeveloperDocsModal: React.FC<DeveloperDocsModalProps> = ({ isOpen, 
               <h4 className="text-sm">5. Content Management & Helper Guide</h4>
             </div>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-              All company details, team members (including AI UI/UX Designer), services, and emails (<code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">hanshiatech@gmail.com</code>) are centralized in <code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">/src/config/site.ts</code>. Refer to <code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">/README.md</code> for step-by-step editing instructions.
+              All company details, team members (including AI UI/UX Designer), services, and emails (<code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">hanshia.tech@gmail.com</code>) are centralized in <code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">/src/config/site.ts</code>. Refer to <code className="bg-white dark:bg-slate-900 px-1 py-0.5 rounded font-mono text-[11px]">/README.md</code> for step-by-step editing instructions.
             </p>
           </div>
 

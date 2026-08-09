@@ -1,10 +1,15 @@
-import aiBusinessAnalystImg from '../assets/images/ai_business_analyst_1784800645367.jpg';
+import founderCtoImg from '../assets/images/founder_cto_male_1786236992973.jpg';
+import femaleFullstackDevImg from '../assets/images/female_fullstack_dev_1786237008931.jpg';
+import femaleBusinessAnalystImg from '../assets/images/female_business_analyst_1786237024007.jpg';
+import femaleUiuxDesignerImg from '../assets/images/female_uiux_designer_1786237038799.jpg';
+import femaleSupportOpsImg from '../assets/images/female_support_ops_1786237054908.jpg';
+import femaleSalesMarketingImg from '../assets/images/female_sales_marketing_1786237071369.jpg';
 
 export const SITE_CONFIG = {
   companyName: 'HANSHIA TECH',
   establishedYear: '2026',
   location: 'Indonesia',
-  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || 'hanshiatech@gmail.com',
+  contactEmail: 'hanshia.tech@gmail.com',
   phoneNumber: '+62 812-3456-7890',
   telegramUsername: '@hanshiatech',
   telegramUrl: 'https://t.me/hanshiatech',
@@ -129,7 +134,7 @@ export const SITE_CONFIG = {
         en: 'Aspiring Chief Technology Officer',
         id: 'Aspiring Chief Technology Officer'
       },
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+      image: founderCtoImg,
       bio: {
         en: 'Leading technical engineering strategy, system architecture, and directing product technology innovation at Hanshia Tech.',
         id: 'Pemimpin strategi rekayasa teknis, arsitektur sistem, serta pengarah inovasi teknologi dan produk di Hanshia Tech.'
@@ -141,7 +146,7 @@ export const SITE_CONFIG = {
         en: 'AI Autonomous Engineer',
         id: 'Insinyur Otonom AI'
       },
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80',
+      image: femaleFullstackDevImg,
       bio: {
         en: 'High-speed AI engine handling end-to-end engineering: Frontend, Backend API, Quality Assurance (QA), and DevOps automation.',
         id: 'Sistem AI berkecepatan tinggi yang menangani rekayasa end-to-end: Frontend, Backend API, Quality Assurance (QA), dan otomatisasi DevOps.'
@@ -153,7 +158,7 @@ export const SITE_CONFIG = {
         en: 'AI Strategy & Requirements Specialist',
         id: 'Spesialis Strategi & Analisis Kebutuhan AI'
       },
-      image: aiBusinessAnalystImg,
+      image: femaleBusinessAnalystImg,
       bio: {
         en: 'Analyzing project specifications, business workflows, market needs, and precisely formulating solution architecture.',
         id: 'Menganalisis spesifikasi proyek, alur bisnis, kebutuhan pasar, dan merumuskan arsitektur solusi secara presisi.'
@@ -165,7 +170,7 @@ export const SITE_CONFIG = {
         en: 'AI UI/UX & Design System Specialist',
         id: 'Spesialis UI/UX & Design System AI'
       },
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+      image: femaleUiuxDesignerImg,
       bio: {
         en: 'Crafting user-centered interfaces, visual typography systems, color aesthetics, and seamless micro-interactions.',
         id: 'Merancang antarmuka berpusat pada pengguna, sistem tipografi visual, estetika warna, dan mikro-interaksi yang intuitif.'
@@ -177,7 +182,7 @@ export const SITE_CONFIG = {
         en: 'AI 24/7 Client Success Support',
         id: 'Dukungan Klien & Operasional AI 24/7'
       },
-      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80',
+      image: femaleSupportOpsImg,
       bio: {
         en: '24/7 operational companion system ensuring seamless application maintenance and rapid response to client inquiries.',
         id: 'Sistem pendamping operasional 24/7 yang memastikan kelancaran pemeliharaan aplikasi dan responsif terhadap inquiry klien.'
@@ -189,7 +194,7 @@ export const SITE_CONFIG = {
         en: 'AI Growth & Client Outreach Specialist',
         id: 'Spesialis Pertumbuhan & Pemasaran AI'
       },
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80',
+      image: femaleSalesMarketingImg,
       bio: {
         en: 'Managing proposal communications, digital market analysis, marketing campaigns, and personally reaching out to potential partners.',
         id: 'Mengelola komunikasi penawaran, analisis pasar digital, kampanye pemasaran, dan menjangkau mitra potensial secara personal.'
